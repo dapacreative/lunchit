@@ -417,7 +417,7 @@ label > .label-body { display: inline-block; margin-left: .5rem; font-weight: no
 
 .modal-open .modal { overflow-x: hidden; overflow-y: auto; }
 
-.modal-dialog { position: absolute; width: auto; margin: 10px; top: 25%; left: 50%; -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; }
+.modal-dialog { position: absolute; width: 90%; margin: 0; top: 25%; left: 50%; -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; }
 
 .modal-content { position: relative; background-color: #ffffff; border: 1px solid #999999; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 6px; box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5); background-clip: padding-box; outline: 0; }
 
