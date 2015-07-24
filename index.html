@@ -15,16 +15,86 @@
     <link rel="stylesheet" href="/assets/css/site.min.css">
     <!-- Modernizr -->
     <script src="/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <link rel="icon" href="favicon.png?v=1" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico?v=1" type="image/x-icon" />
   </head>
   <body>
+
+    <div class="site-container">
+        
+      <!-- Header  -->
+      <header class="container header">
+        <div class="wrap">
+          <h1><img src="/assets/img/logo.svg" alt="Lunch!t"></h1>
+          <a class="ir" href="#content">Go to Content</a>
+        </div><!-- /.wrap -->
+      </header><!-- /.header -->
+
+      
+      <!-- Content -->
+      <div class="container content" id="content">
+        <div class="wrap">
+          <form action="">
+          <h2>Who will be joining on this lunch expedition?</h2>
+            <ul><!--People List Inserted here --></ul>
+
+            <h3>What type of lunch are you thinking?</h3>
+            <ul>
+              <li>
+                <input type="radio" id="fast" value="fast" name="time">
+                <label for="fast">Fast</label>
+              </li>
+              <li>
+                <input type="radio" id="sitdown" value="sitdown" name="time" checked="checked">
+                <label for="sitdown">Sitdown</label>
+              </li>
+              <li>
+                <input type="radio" id="special" value="special" name="time">
+                <label for="special">Special</label>
+              </li>
+            </ul>
+            <div class="submit">
+              <button type="submit" class="btn">Lunch!t</button>
+            </div><!-- /.submit -->
+          </form>
+
+        </div><!-- /.wrap -->
+      </div><!-- /.content -->
+      
+      
+      <!-- Footer -->
+      <footer class="container footer">
+        <div class="wrap">
+          <p>&copy;2015 Banyan Communications Lunch Committee LLC</p>
+        </div><!-- /.wrap -->
+      </footer><!-- /.footer -->
+
+    </div><!-- /.site-container -->
+  
+    <script id="person-list-template" type="text/x-handlebars-template">
+      {{#people}}
+      <li>
+        <input type="checkbox" id="{{toLowerCase name}}" value="{{name}}" name="{{toLowerCase name}}">
+        <label for="{{toLowerCase name}}">{{name}}</label>
+      </li>
+      {{/people}}
+    </script>
 
     <!-- jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-    <!-- Scripts -->
-    <script src="/assets/js/site.min.js"></script>
+    <!-- Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+
+    <!-- Bootbox -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="/assets/js/site.js"></script>
     
-  
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!--<script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

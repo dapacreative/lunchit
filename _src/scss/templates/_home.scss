@@ -1,0 +1,153 @@
+/* Home Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.content {
+  height: 100%;
+  display: table;
+  width: 100%;
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: translateZ(0) scale(1);
+  .modal-open & {
+    opacity: 0;
+    transform: translateZ(0) scale(0.9);
+  }
+
+  & > .wrap {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  h2, h3 {
+    text-align: center;
+  }
+
+  ul {
+    @extend %reset-list;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 0;
+    li {
+      display: inline-block;
+      font-size: 14px;
+    }
+  }
+
+  h2 + ul {
+    li {
+      padding: 0 8px;
+    }
+  }
+
+  h3 + ul {
+    li {
+      &:first-child {
+        input[type="radio"] + label{
+          border-radius: 4px 0 0 4px;
+          border-right: 1px solid white;
+        } 
+      }
+      &:last-child {
+        input[type="radio"] + label{
+          border-radius: 0 4px 4px 0;
+          border-left: 1px solid white;
+        } 
+      }
+    }
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+  }
+
+  input[type="checkbox"] {
+    &:checked + label {
+      color: $baseColor;
+      &:before {
+        background: $green;
+        box-shadow: 0 0 4px 1px rgba(0,0,0,0.4);
+        transition: all 0.2s $custom-easing1;
+      }
+      &:hover {
+        color: $baseColor;
+        &:before {
+          background: $green;
+          box-shadow: 0 0 4px 1px rgba(0,0,0,0.4);
+          transition: all 0.2s $custom-easing1;
+        }
+      }
+    }
+  }
+
+  input[type="checkbox"] + label {
+    position: relative;
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 90px;
+    color: white;
+    cursor: pointer;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $orange;
+      border-radius: 100%;
+      z-index: -1;
+      box-shadow: 0 0 4px 1px rgba(0,0,0,0.2);
+      transition: all 0.2s $custom-easing1;
+      transform: translateZ(0) scale(1);
+    }
+    &:hover {
+      &:before {
+        background: $darkOrange;
+        transform: translateZ(0) scale(1.1);
+      }
+    }
+  }
+
+  input[type="radio"] + label {
+    position: relative;
+    display: block;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    min-width: 80px;
+    text-align: center;
+    background: $orange;
+    &:hover {
+      background: $darkOrange;
+    }
+  }
+
+  input[type="radio"] {
+    &:checked + label {
+      color: $baseColor;
+      background: $green;
+    }
+  }
+
+  .submit {
+    text-align: center;
+    button {
+      height: 50px;
+      padding: 0 60px;
+      line-height: 50px;
+    }
+  }
+
+}

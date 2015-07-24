@@ -22,15 +22,24 @@ $baseColor: #333;
 
 $gray: #bbb;
 $lightGray: #D1D1D1;
-$darkGray: #888;
+$darkGray: #555759;
 
 $blue: #1EAEDB;
 $blueHover: #0FA0CE;
-
 $blueAlt: #33C3F0;
+
+$orange: #D34526;
+$darkOrange: #c13f23;
+$darkOrangeAlt: #8f2f1a;
+$green: #3FD5AE;
+
 
 //Sprites
 $ieSprite: '.lt-ie9' !default;
 $sprite: map-get($icons, sprite) !default;
 $baseFontSize: 16px !default;
 $iconPadding: 5px;
+
+//Easing
+$custom-easing1: cubic-bezier(1, .1, 0, 0.9);
+$custom-easing2: cubic-bezier(1.000,-0.25,0,1.25);

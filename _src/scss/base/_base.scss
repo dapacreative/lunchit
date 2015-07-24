@@ -15,7 +15,13 @@ body {
   color: $baseColor;
   font-family: $baseFont;
   font-size: 1.4em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.8; 
+  line-height: 1.8;
+}
+
+.site-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 /* Typography
@@ -31,17 +37,17 @@ h1 {
   letter-spacing: -.1rem;  
 }
 h2 { 
-  font-size: 3.6rem; 
+  font-size: 3.0rem; 
   line-height: 1.25;
   letter-spacing: -.1rem; 
 }
 h3 { 
-  font-size: 3.0rem; 
+  font-size: 2.4rem; 
   line-height: 1.3;
   letter-spacing: -.1rem; 
 }
 h4 { 
-  font-size: 2.4rem; 
+  font-size: 2.0rem; 
   line-height: 1.35;
   letter-spacing: -.08rem; 
 }
@@ -178,4 +184,10 @@ hr {
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid $lightGray; 
+}
+
+%reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

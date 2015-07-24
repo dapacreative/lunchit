@@ -45,8 +45,8 @@ input[type="submit"].btn-primary,
 input[type="reset"].btn-primary,
 input[type="button"].btn-primary {
   color: white;
-  background-color: $blueAlt;
-  border-color: $blueAlt; 
+  background-color: $orange;
+  border-color: $orange; 
 }
 .btn.btn-primary:hover,
 button.btn-primary:hover,
@@ -59,6 +59,6 @@ input[type="submit"].btn-primary:focus,
 input[type="reset"].btn-primary:focus,
 input[type="button"].btn-primary:focus {
   color: white;
-  background-color: $blue;
-  border-color: $blue; 
+  background-color: $darkOrange;
+  border-color: $darkOrange; 
 }
