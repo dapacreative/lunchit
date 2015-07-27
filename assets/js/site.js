@@ -11,51 +11,6 @@ var Site = (function($) {
       $content = $root.find('.content'),
       $footer = $root.find('.footer');
 
-  var lunchees = {people: [
-    {
-      'name': 'Dan',
-      'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
-      'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
-      'fast': ['Subway', 'Arbys', 'Jimmy Johns', 'Imos'], 
-      'delivery': ['Jimmy Johns', 'Imos'], 
-    },
-    {
-      'name': 'Amanda',
-      'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
-      'sitdown': ['Massas', 'El Agave', 'The Tap'],
-      'fast': ['Arbys', 'Jimmy Johns', 'Imos'],
-      'delivery': ['Jimmy Johns', 'Imos'], 
-    },
-    {
-      'name': 'Jared',
-      'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
-      'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
-      'fast': ['Subway', 'Arbys', 'Jimmy Johns', 'Imos'],
-      'delivery': ['Jimmy Johns', 'Imos'], 
-    },
-    {
-      'name': 'Bill',
-      'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
-      'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
-      'fast': ['Subway', 'Arbys', 'Jimmy Johns', 'Imos'],
-      'delivery': ['Jimmy Johns', 'Imos'], 
-    },
-    {
-      'name': 'Jacob',
-      'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
-      'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
-      'fast': ['Subway', 'Jimmy Johns', 'Imos'],
-      'delivery': ['Jimmy Johns', 'Imos'], 
-    },
-    {
-      'name': 'Erica',
-      'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
-      'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
-      'fast': ['Subway', 'Jimmy Johns', 'Imos'],
-      'delivery': ['Jimmy Johns', 'Imos'], 
-    }
-  ]};
-
   var selectedPlaces = [],
       finalPlaces = '',
       placeType = 'sitdown';
@@ -65,7 +20,7 @@ var Site = (function($) {
     init: function() {  
       this.registerHandlebarHelpers(); 
       this.bindEvents();
-      this.renderPeopleList();
+      this.renderPeopleList(city);
     },
     
     bindEvents: function() {
@@ -122,10 +77,17 @@ var Site = (function($) {
       this.customAlertBox(alertSettings);
     },
 
-    getPerson: function(name) {
-      return _.filter(lunchees.people, function(data) { 
-        return data.name === name;
-      })[0];
+    getPerson: function(location, name) {
+      switch(location) {
+        case 'stl':
+        return _.filter(stlLunchees.people, function(data) { 
+          return data.name === name;
+        })[0];
+        case 'atl':
+        return _.filter(atlLunchees.people, function(data) { 
+          return data.name === name;
+        })[0];
+      }
     },
 
     getPersonFoodPlaces: function(person, type) {
@@ -155,7 +117,7 @@ var Site = (function($) {
       $('input[type="checkbox"]:checked').each(function(){
         var value = $(this).val(),
             isChecked = this.checked,
-            person = $this.getPerson(value),
+            person = $this.getPerson(city, value),
             placeList = $this.getPersonFoodPlaces(person, placeType);
 
         $this.setSelectedPlaces(placeList);
@@ -164,10 +126,10 @@ var Site = (function($) {
       finalPlaces = this.compareSelectedPlaces(selectedPlaces);
     },
 
-    renderPeopleList: function() {
+    renderPeopleList: function(location) {
       var source = $("#person-list-template").html(),
           tpl = Handlebars.compile(source),
-          context = lunchees,
+          context = (location === 'stl') ? stlLunchees : atlLunchees,
           html = tpl(context);
 
       $content.find('h2 + ul').html(html);
