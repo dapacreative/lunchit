@@ -174,7 +174,7 @@ var Site = (function($) {
     },
 
     renderFinalPlace: function(places) {
-      var insults = ['Dude', 'Buddy', 'Goof Ball', 'Nerd', 'Silly Goose'], 
+      var insults = ['Dude', 'Buddy', 'Goof Ball', 'Nerd', 'Silly Goose', 'Prison Barber', 'You lewd, crude, rude, bag of pre-chewed food dude', 'Turd', 'Kiddo', 'Potato Chip', 'Lunch Box', 'Knucklehead', 'Ubergoober', 'Butt Nugget', 'Lollygagger', 'Scalawag', 'Swashbuckler', 'Dork', 'Doofus', 'Block Head', 'Big Meanie' ], 
           random = Math.floor(Math.random() * insults.length),
           finalPlace = (this.getRandomPlace(places) === undefined) ? 'You need to choose someone, ' + insults[random] + '!' : this.getRandomPlace(places),
           title = (this.getRandomPlace(places) === undefined) ? 'Alert' : 'You are going to';
