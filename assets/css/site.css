@@ -464,8 +464,9 @@ label > .label-body { display: inline-block; margin-left: .5rem; font-weight: no
 .content ul { text-align: center; margin-bottom: 40px; font-size: 0; }
 .content ul li { display: inline-block; font-size: 14px; }
 .content h2 + ul li { padding: 0 8px; }
-.content h3 + ul li:first-child input[type="radio"] + label { border-radius: 4px 0 0 4px; border-right: 1px solid white; }
-.content h3 + ul li:last-child input[type="radio"] + label { border-radius: 0 4px 4px 0; border-left: 1px solid white; }
+.content h3 + ul li:first-child input[type="radio"] + label { border-radius: 4px 0 0 4px; }
+.content h3 + ul li:last-child input[type="radio"] + label { border-radius: 0 4px 4px 0; }
+.content h3 + ul li + li { border-left: 1px solid white; }
 .content input[type="checkbox"], .content input[type="radio"] { position: absolute; overflow: hidden; clip: rect(0 0 0 0); height: 1px; width: 1px; margin: -1px; padding: 0; }
 .content input[type="checkbox"]:checked + label { color: #333; }
 .content input[type="checkbox"]:checked + label:before { background: #3FD5AE; box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.4); -webkit-transition: all 0.2s cubic-bezier(1, 0.1, 0, 0.9); transition: all 0.2s cubic-bezier(1, 0.1, 0, 0.9); }

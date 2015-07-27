@@ -46,15 +46,16 @@
       &:first-child {
         input[type="radio"] + label{
           border-radius: 4px 0 0 4px;
-          border-right: 1px solid white;
         } 
       }
       &:last-child {
         input[type="radio"] + label{
           border-radius: 0 4px 4px 0;
-          border-left: 1px solid white;
         } 
       }
+    }
+    li + li {
+      border-left: 1px solid white;
     }
   }
 
