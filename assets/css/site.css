@@ -395,7 +395,9 @@ label > .label-body { display: inline-block; margin-left: .5rem; font-weight: no
 .header { background: #D34526 url(/assets/img/background.jpg) no-repeat; background-size: cover; border: 10px solid white; height: 100%; display: table; width: 100%; }
 .header > .wrap { display: table-cell; width: 100%; height: 100%; vertical-align: middle; }
 .header h1 { display: block; color: white; max-width: 300px; margin: 0 auto; position: relative; top: -40px; background: rgba(143, 47, 26, 0.5); }
+.header h1:hover span { opacity: 1; -webkit-transform: translate(-50%, -25px); -ms-transform: translate(-50%, -25px); transform: translate(-50%, -25px); }
 .header h1 img { display: block; max-width: 100%; }
+.header h1 span { position: absolute; display: block; top: 0; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); color: white; font-size: 14px; text-transform: uppercase; opacity: 0; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 .header h1 + a { position: absolute; bottom: 30px; left: 50%; height: 32px; width: 32px; margin-left: -16px; background: url(/assets/img/icon-arrow-down.svg) no-repeat; -webkit-transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9); transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9); -webkit-transform: translateZ(0) translateY(0); transform: translateZ(0) translateY(0); }
 .header h1 + a:hover { -webkit-transform: translateZ(0) translateY(5px); transform: translateZ(0) translateY(5px); background: url(/assets/img/icon-arrow-down-green.svg) no-repeat; }
 
