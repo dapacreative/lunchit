@@ -469,11 +469,14 @@ label > .label-body { display: inline-block; margin-left: .5rem; font-weight: no
 .content input[type="checkbox"]:checked + label:before { background: #3FD5AE; box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.4); -webkit-transition: all 0.2s cubic-bezier(1, 0.1, 0, 0.9); transition: all 0.2s cubic-bezier(1, 0.1, 0, 0.9); }
 .content input[type="checkbox"]:checked + label:hover { color: #333; }
 .content input[type="checkbox"]:checked + label:hover:before { background: #3FD5AE; box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.4); -webkit-transition: all 0.2s cubic-bezier(1, 0.1, 0, 0.9); transition: all 0.2s cubic-bezier(1, 0.1, 0, 0.9); }
-.content input[type="checkbox"] + label { position: relative; display: block; width: 90px; height: 90px; border-radius: 100%; text-align: center; line-height: 90px; color: white; cursor: pointer; }
+.content input[type="checkbox"] + label { position: relative; display: block; width: 90px; height: 90px; border-radius: 100%; text-align: center; line-height: 90px; color: white; cursor: pointer; white-space: nowrap; }
 .content input[type="checkbox"] + label:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #D34526; border-radius: 100%; z-index: -1; box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2); -webkit-transition: all 0.2s cubic-bezier(1, 0.1, 0, 0.9); transition: all 0.2s cubic-bezier(1, 0.1, 0, 0.9); -webkit-transform: translateZ(0) scale(1); transform: translateZ(0) scale(1); }
 .content input[type="checkbox"] + label:hover:before { background: #c13f23; -webkit-transform: translateZ(0) scale(1.1); transform: translateZ(0) scale(1.1); }
-.content input[type="radio"] + label { position: relative; display: block; color: white; cursor: pointer; padding: 5px 10px; min-width: 80px; text-align: center; background: #D34526; }
+.content input[type="radio"] + label { position: relative; display: block; color: white; cursor: pointer; padding: 5px 10px; min-width: 70px; text-align: center; background: #D34526; }
 .content input[type="radio"] + label:hover { background: #c13f23; }
 .content input[type="radio"]:checked + label { color: #333; background: #3FD5AE; }
 .content .submit { text-align: center; }
 .content .submit button { height: 50px; padding: 0 60px; line-height: 50px; }
+@media (max-width: 600px) { .content h2 + ul li { padding: 0 4px; }
+  .content input[type="checkbox"] + label { width: 75px; height: 75px; line-height: 75px; }
+  .content input[type="radio"] + label { padding: 4px 5px; min-width: 60px; font-size: 13px; } }

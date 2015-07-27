@@ -16,31 +16,43 @@ var Site = (function($) {
       'name': 'Dan',
       'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
       'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
-      'fast': ['Subway', 'Arbys', 'Jimmy Johns', 'Imos']
+      'fast': ['Subway', 'Arbys', 'Jimmy Johns', 'Imos'], 
+      'delivery': ['Jimmy Johns', 'Imos'], 
     },
     {
       'name': 'Amanda',
       'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
       'sitdown': ['Massas', 'El Agave', 'The Tap'],
-      'fast': ['Arbys', 'Jimmy Johns', 'Imos']
+      'fast': ['Arbys', 'Jimmy Johns', 'Imos'],
+      'delivery': ['Jimmy Johns', 'Imos'], 
     },
     {
       'name': 'Jared',
       'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
       'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
-      'fast': ['Subway', 'Arbys', 'Jimmy Johns', 'Imos']
+      'fast': ['Subway', 'Arbys', 'Jimmy Johns', 'Imos'],
+      'delivery': ['Jimmy Johns', 'Imos'], 
     },
     {
       'name': 'Bill',
       'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
       'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
-      'fast': ['Subway', 'Arbys', 'Jimmy Johns', 'Imos']
+      'fast': ['Subway', 'Arbys', 'Jimmy Johns', 'Imos'],
+      'delivery': ['Jimmy Johns', 'Imos'], 
     },
     {
       'name': 'Jacob',
       'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
       'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
-      'fast': ['Subway', 'Jimmy Johns', 'Imos']
+      'fast': ['Subway', 'Jimmy Johns', 'Imos'],
+      'delivery': ['Jimmy Johns', 'Imos'], 
+    },
+    {
+      'name': 'Erica',
+      'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
+      'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
+      'fast': ['Subway', 'Jimmy Johns', 'Imos'],
+      'delivery': ['Jimmy Johns', 'Imos'], 
     }
   ]};
 
@@ -118,6 +130,8 @@ var Site = (function($) {
 
     getPersonFoodPlaces: function(person, type) {
       switch(type) {
+        case 'delivery': 
+          return person.delivery;
         case 'fast': 
           return person.fast;
         case 'sitdown': 
