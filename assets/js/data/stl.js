@@ -32,10 +32,10 @@ var stlLunchees = {people: [
       'name': 'Jacob',
       'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
       'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
-      'fast': ['Subway', 'Jimmy Johns'],
-      'delivery': ['Jimmy Johns', 'Imos'], 
+      'fast': ['Sonic'],
+      'delivery': ['Imos'], 
     },
-    {
+    /*{
       'name': 'Erica',
       'special': ['Deweys', 'Trailhead Brewing Co', 'Old Mill Stream Inn'],
       'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire'],
@@ -48,5 +48,5 @@ var stlLunchees = {people: [
       'sitdown': ['Massas', 'El Agave', 'The Tap', 'Sugarfire', 'Alins Diner'],
       'fast': ['Subway', 'Arbys', 'Jimmy Johns', 'Sonic', 'Taco Bell'],
       'delivery': ['Jimmy Johns', 'Imos', 'Chinese Place', 'Dominos'], 
-    }
+    }*/
   ]};
