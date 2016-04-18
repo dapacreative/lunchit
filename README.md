@@ -1,2 +1,2 @@
 Lunchit
-Author: Banyan Communications
+Author: Daniel Smith
